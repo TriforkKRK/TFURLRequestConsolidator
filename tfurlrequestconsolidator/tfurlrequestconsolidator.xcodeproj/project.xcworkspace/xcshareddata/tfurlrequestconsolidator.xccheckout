@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5D35B711-C9F2-40F3-B89F-E79E9E423FCC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>tfurlrequestconsolidator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>03C4AC29-83A7-44C6-956B-44CC604EC1EF</key>
+		<string>https://github.com/TriforkKRK/TFURLRequestConsolidator</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>tfurlrequestconsolidator/tfurlrequestconsolidator.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>03C4AC29-83A7-44C6-956B-44CC604EC1EF</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TriforkKRK/TFURLRequestConsolidator</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>03C4AC29-83A7-44C6-956B-44CC604EC1EF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>03C4AC29-83A7-44C6-956B-44CC604EC1EF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TFURLRequestConsolidator</string>
+		</dict>
+	</array>
+</dict>
+</plist>
