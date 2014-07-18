@@ -32,7 +32,6 @@
 /**
     Block type for TFURLRequestConsolidator callback.
     @param object data downloaded from the specified URL converted to an object or NSData (may be nil if error occurred)
-    @param response received response of the underlying connection (nil if data was read from cache)
     @param error error that occurred during request (nil if data was read from cache or request was successful)
  */
 typedef void (^TFURLRequestConsolidatorBlock)(id object, NSError *error);
@@ -42,36 +41,40 @@ typedef void (^TFURLRequestConsolidatorBlock)(id object, NSError *error);
 @required
 
 /**
- * @param TFURLRequestConsolidator instance of dataFetcher
- * @param url url to fetch
- * @param block completionBLock
+ * The delegate is asked to handle a request on behalf of a TFURLRequestConsolidator instance.
+ * @param consolidator instance of TFURLRequestConsolidator asking the request to be sent
+ * @param request request to be sent
+ * @param userInfo additional data passed to |consolidator| when |request| was made
+ * @param completionHandler completion block that should be called by the delegate after handling |request|
  * @return a reference to requestOperation, it can be anything that repreents a work unit that processes this request. May be nil.
  */
 - (id)requestConsolidator:(TFURLRequestConsolidator *)consolidator sendRequest:(NSURLRequest *)request userInfo:(id)userInfo completionHandler:(TFURLRequestConsolidatorBlock)completionHandler;
-
 
 @end
 
 
 /**
     Protocol for classes that want to act as a cache for TFURLRequestConsolidator instances.
-    Important: Implementation of these methods is expected to be Thread-Safe.
+    Important: Implementation of these methods is expected to be thread-safe.
  */
 @protocol TFURLRequestConsolidatorCacheDelegate <NSObject>
 @required
+
 /**
     Returns data cached for the specified request.
-    @param TFURLRequestConsolidator object requesting cached data
+    @param consolidator instance of TFURLRequestConsolidator requesting cached data
     @param request request of the cached data
+    @param userInfo additional data passed to |consolidator| when |request| was made
     @returns response object cached for specified request or nil if no such data
  */
 - (id)requestConsolidator:(TFURLRequestConsolidator *)consolidator cachedResponseObjectForRequest:(NSURLRequest *)request userInfo:(NSDictionary *)userInfo;
 
 /**
     Caches data for the specified request for later retrieval.
-    @param TFURLRequestConsolidator object requesting caching
+    @param consolidator instance of TFURLRequestConsolidator asking the response object to be cached
     @param object response object to be cached
     @param request request of the data to be cached
+    @param userInfo additional data passed to |consolidator| when |request| was made
  */
 - (void)requestConcolidator:(TFURLRequestConsolidator *)consolidator cacheResponseObject:(id)object forRequest:(NSURLRequest *)request userInfo:(NSDictionary *)userInfo;
 
@@ -84,7 +87,7 @@ typedef void (^TFURLRequestConsolidatorBlock)(id object, NSError *error);
     It can also redirect data fetch calls to a cache improving performance
     and reducing bandwidth usage.
  
-    - we could change the request delegate to be optional and in a case when it is not set use just standard NSURLConnection to get this resource.
+    TODO: we could change the request delegate to be optional and in a case when it is not set use just standard NSURLConnection to get this resource.
  */
 @interface TFURLRequestConsolidator : NSObject
 

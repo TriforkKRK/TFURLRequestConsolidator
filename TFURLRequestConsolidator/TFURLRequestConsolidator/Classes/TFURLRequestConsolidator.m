@@ -29,6 +29,7 @@
 
 
 @interface TFURLRequestConsolidator ()
+
 /** 
     @{
         @"requestKey1" : @[blockA, blockB, ...],
@@ -70,7 +71,6 @@
         NSMutableArray *requestBlocks = [self.fetchRequestBlocks objectForKey:requestKey];
         if (requestBlocks != nil) {
             [requestBlocks addObject:[completionHandler copy]];
-            
             return [self.fetchRequests objectForKey:requestKey];
         }
     
