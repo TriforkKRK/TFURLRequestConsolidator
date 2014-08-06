@@ -1,0 +1,9 @@
+target 'TFURLRequestConsolidator', :exclusive => true do
+  pod "TFURLRequestConsolidator", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "TFURLRequestConsolidator", :path => "../"
+
+  pod 'Kiwi'
+end

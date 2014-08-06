@@ -1,0 +1,17 @@
+PODS:
+  - Kiwi (2.3.0)
+  - TFURLRequestConsolidator (0.0.1)
+
+DEPENDENCIES:
+  - Kiwi
+  - TFURLRequestConsolidator (from `../`)
+
+EXTERNAL SOURCES:
+  TFURLRequestConsolidator:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
+  TFURLRequestConsolidator: fe6185f92a103009ef763ebe5ad213117c7cd300
+
+COCOAPODS: 0.33.1

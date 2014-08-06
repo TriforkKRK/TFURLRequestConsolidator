@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_TFURLRequestConsolidator_TFURLRequestConsolidator : NSObject
+@end
+@implementation PodsDummy_Pods_TFURLRequestConsolidator_TFURLRequestConsolidator
+@end
