@@ -20,9 +20,11 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Julian Król, jkr@trifork.com
+Bartłomiej Hyży, hyzy.bartlomiej@gmail.com
+Krzysztof Profic, kprofic@gmail.com
+Julian Król, viperking@poczta.onet.pl
 
 ## License
 
-TFURLRequestConsolidator is available under the MIT license. See the LICENSE file for more info.
+TFURLRequestConsolidator is available under Apache 2 license. See the LICENSE file for more info.
 
